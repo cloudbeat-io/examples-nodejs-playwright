@@ -1,0 +1,15 @@
+{
+  "name": "playwright-examples",
+  "version": "0.0.1",
+  "description": "This repo is used to demonstrate various testing scenarios with [Playwright](https://playwright.dev/) 🎭 with node.js",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@cloudbeat/playwright": "1.0.0-beta.5",
+    "@playwright/test": "^1.41.2",
+    "@types/node": "^20.11.16",
+    "dotenv": "^16.4.1"
+  },
+  "scripts": {
+    "test": "npx playwright test api-mocking.spec.ts"
+  }
+}
