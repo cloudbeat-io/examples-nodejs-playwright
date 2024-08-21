@@ -27,6 +27,7 @@ test.describe('add to cart scenarios', () => {
     await page.getByRole('button', { name: 'Buy Now' }).click();
     await addAndViewCart(page);
     await expect(page.getByText('Xbox Wireless Controller Lunar Shift Special Edition')).toBeVisible();
+  });
 
   test('example of setting output data', async ({ page }) => {
     await page.getByRole('button', { name: 'Buy Now' }).click();
