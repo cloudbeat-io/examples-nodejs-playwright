@@ -4,7 +4,7 @@
   "description": "This repo is used to demonstrate various testing scenarios with [Playwright](https://playwright.dev/) 🎭 with node.js",
   "license": "Apache-2.0",
   "devDependencies": {
-    "@cloudbeat/playwright": "1.0.2",
+    "@cloudbeat/playwright": "1.0.6",
     "@playwright/test": "^1.41.2",
     "@types/node": "^20.11.23",
     "dotenv": "^16.4.1"
