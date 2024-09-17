@@ -1,5 +1,6 @@
 import { test, expect, Page } from '@playwright/test';
 import { cb } from '@cloudbeat/playwright';
+import { FailureReasonEnum } from '@cloudbeat/types';
 
 // various test scenarios for adding items to the cart
 // comment out the line before the `addAndViewCart` function in one of the tests 
@@ -27,10 +28,12 @@ test.describe('add to cart scenarios', () => {
     await page.getByRole('button', { name: 'Buy Now' }).click();
     await addAndViewCart(page);
     await expect(page.getByText('Xbox Wireless Controller Lunar Shift Special Edition')).toBeVisible();
+    cb.setFailureReason(FailureReasonEnum.RealDefect);
   });
 
   test('example of setting output data', async ({ page }) => {
     await page.getByRole('button', { name: 'Buy Now' }).click();
+    cb.addTestAttribute('atttname', 'attrvalue')
     cb.addOutputData('outputdata1', 'foobar');
   });
 
